@@ -102,8 +102,7 @@ orders as o ;
 
  -- with common column name it work as a INNER join and without it works as a CROSS join 
  -- in SQL we don't use NATURAL join 
- -- because 
- 
+ -- because we specify the join condition, so if a new column with the same name is added later, the join result can change unexpectedly
  
 select c.customer_name, c.cid, sum(o.amount)  from customers as c 
 join 
